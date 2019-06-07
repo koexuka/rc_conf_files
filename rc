@@ -16,6 +16,13 @@ PROMPT2="%{${fg[green]}%}}->: %{${reset_color}%}"
 SPROMPT="%{${fg[green]}%}correct:%R -> %r [n y a e]? %{${reset_color}%}"
 RPROMPT="%{${fg[cyan]}%}[%~] %*%{${reset_color}%}"
 
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=100000
+# historyファイルに時刻を残す
+setopt extended_history
+# 複数シェルでhistoryを共有
+setopt share_history
 
 ################################
 # vimrc
